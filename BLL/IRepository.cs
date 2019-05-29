@@ -9,9 +9,9 @@ namespace BLL
     public interface IRepository<T> where T : class
     {
         List<T> GetAll();
-        T GetById(string id);
+        T GetById(int id);
         void Create(T entity);
         void Update(T entity);
-        void Delete(string id);
+        void Delete(int id);
     }
 }

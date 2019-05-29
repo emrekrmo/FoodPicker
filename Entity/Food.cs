@@ -13,7 +13,7 @@ namespace Entity
         public bool IsHealty { get; set; }
         public FoodType FoodType { get; set; }
 
-        public string RestaurantId { get; set; }
+        public int RestaurantId { get; set; }
         //public string UserId { get; set; }
 
         public virtual Restaurant Restaurant { get; set; }

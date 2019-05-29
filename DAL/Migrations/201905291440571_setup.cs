@@ -11,12 +11,12 @@ namespace DAL.Migrations
                 "dbo.Foods",
                 c => new
                     {
-                        Id = c.String(nullable: false, maxLength: 128),
+                        Id = c.Int(nullable: false, identity: true),
                         FoodName = c.String(nullable: false, maxLength: 50),
                         Price = c.Decimal(nullable: false, precision: 18, scale: 2),
                         IsHealty = c.Boolean(nullable: false),
                         FoodType = c.Int(nullable: false),
-                        RestaurantId = c.String(nullable: false, maxLength: 128),
+                        RestaurantId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Restaurants", t => t.RestaurantId, cascadeDelete: true)
@@ -27,7 +27,7 @@ namespace DAL.Migrations
                 "dbo.Restaurants",
                 c => new
                     {
-                        Id = c.String(nullable: false, maxLength: 128),
+                        Id = c.Int(nullable: false, identity: true),
                         RestaurantName = c.String(),
                     })
                 .PrimaryKey(t => t.Id);

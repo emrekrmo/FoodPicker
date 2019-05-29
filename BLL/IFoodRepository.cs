@@ -1,13 +1,13 @@
-﻿using System;
+﻿using Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entity
+namespace BLL
 {
-    public class BaseEntity
+    public interface IFoodRepository : IRepository<Food>
     {
-        public int Id { get; set; } // Convert to GUID 
     }
 }

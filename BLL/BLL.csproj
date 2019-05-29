@@ -49,6 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseRepository.cs" />
+    <Compile Include="FoodRepository.cs" />
+    <Compile Include="IFoodRepository.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -58,6 +60,10 @@
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{7F98EB3A-C61D-463F-92FD-F7B0B6EBBA20}</Project>
       <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{4493D60C-475E-4E9A-AAFF-1C94675C978F}</Project>
+      <Name>Entity</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

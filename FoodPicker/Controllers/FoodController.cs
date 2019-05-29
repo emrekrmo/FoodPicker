@@ -8,33 +8,19 @@ using System.Web.Mvc;
 
 namespace FoodPicker.Controllers
 {
-    public class HomeController : Controller
+    public class FoodController : Controller
     {
         private readonly UnitOfWork _uw;
-        public HomeController()
+        public FoodController()
         {
             _uw = new UnitOfWork();
         }
 
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult List()
-        {
             List<Food> foodList = _uw.foodRep.GetAll();
+
             return View(foodList);
-        }
-
-        public ActionResult About()
-        {
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            return View();
         }
     }
 }

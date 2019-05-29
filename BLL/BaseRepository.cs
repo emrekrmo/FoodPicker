@@ -19,7 +19,7 @@ namespace BLL
             _db.Set<T>().Add(entity);
         }
 
-        public void Delete(string id)
+        public void Delete(int id)
         {
             var delete = GetById(id);
             _db.Set<T>().Remove(delete);
@@ -30,7 +30,7 @@ namespace BLL
             return _db.Set<T>().ToList();
         }
 
-        public T GetById(string id)
+        public T GetById(int id)
         {
             return _db.Set<T>().Find(id);
         }
@@ -40,7 +40,7 @@ namespace BLL
             Type t = typeof(T);
             string className = t.Name;
             var idProp = t.GetProperty("Id");
-            string id = (string)idProp.GetValue(entity);
+            int id = (int)idProp.GetValue(entity);
 
             var oldEntity = GetById(id);
             _db.Entry(oldEntity).CurrentValues.SetValues(entity);
