@@ -20,7 +20,7 @@ namespace BLL
         }
         public void Save()
         {
-            throw new NotImplementedException();
+            db.SaveChanges();
         }
     }
 }
