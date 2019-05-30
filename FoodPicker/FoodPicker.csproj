@@ -140,6 +140,9 @@
     <Content Include="assets\css\img\favicon-16x16.png" />
     <Content Include="assets\css\img\favicon-32x32.png" />
     <Content Include="assets\css\img\favicon.ico" />
+    <Content Include="assets\icons\ionicons\css\ionicons.css" />
+    <Content Include="assets\icons\ionicons\css\ionicons.min.css" />
+    <Content Include="assets\icons\ionicons\fonts\ionicons.svg" />
     <Content Include="assets\img\apple-touch-icon.png" />
     <Content Include="assets\img\avatar\avatar-01-big.jpg" />
     <Content Include="assets\img\avatar\avatar-01.jpg" />
@@ -244,6 +247,9 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="assets\icons\ionicons\fonts\ionicons.eot" />
+    <Content Include="assets\icons\ionicons\fonts\ionicons.ttf" />
+    <Content Include="assets\icons\ionicons\fonts\ionicons.woff" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

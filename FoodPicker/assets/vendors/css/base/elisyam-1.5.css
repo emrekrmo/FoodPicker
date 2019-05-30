@@ -6970,9 +6970,9 @@ nav.navbar .user-size.dropdown-menu a.logout {
   padding: 0;
   line-height: 55px;
   position: relative;
-  bottom: -20px;
+  /*bottom: -20px;*/
   font-size: 1.8rem;
-  margin: 10px auto 0;
+  margin: 10px auto /*0*/;
 }
 
 nav.navbar .user-size.dropdown-menu a.logout:hover {
