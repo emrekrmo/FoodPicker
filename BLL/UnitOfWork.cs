@@ -11,11 +11,11 @@ namespace BLL
     public class UnitOfWork : IUnitOfWork
     {
         public ApplicationDbContext db = new ApplicationDbContext();
-        public BaseRepository<Food> foodRep;
+        public FoodRepository foodRep;
         public BaseRepository<Restaurant> restRep;
         public UnitOfWork()
         {
-            foodRep = new BaseRepository<Food>(db);
+            foodRep = new FoodRepository(db);
             restRep = new BaseRepository<Restaurant>(db);
         }
         public void Save()

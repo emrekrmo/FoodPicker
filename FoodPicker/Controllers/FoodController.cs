@@ -18,9 +18,9 @@ namespace FoodPicker.Controllers
 
         public ActionResult Index()
         {
-            List<Food> foodList = _uw.foodRep.GetAll();
+            //List<Food> foodList = _uw.foodRep.GetAll();
 
-            return View(foodList);
+            return View();
         }
     }
 }
