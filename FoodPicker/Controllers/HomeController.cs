@@ -21,12 +21,6 @@ namespace FoodPicker.Controllers
             return View();
         }
 
-        //public ActionResult List()
-        //{
-        //    List<Food> foodList = _uw.foodRep.GetAll();
-        //    return View(foodList);
-        //}
-
         public ActionResult About()
         {
             return View();

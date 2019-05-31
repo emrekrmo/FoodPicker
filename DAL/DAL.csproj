@@ -49,9 +49,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
-    <Compile Include="Migrations\201905291440571_setup.cs" />
-    <Compile Include="Migrations\201905291440571_setup.Designer.cs">
-      <DependentUpon>201905291440571_setup.cs</DependentUpon>
+    <Compile Include="Migrations\201905310803258_setup.cs" />
+    <Compile Include="Migrations\201905310803258_setup.Designer.cs">
+      <DependentUpon>201905310803258_setup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905310810497_db.cs" />
+    <Compile Include="Migrations\201905310810497_db.Designer.cs">
+      <DependentUpon>201905310810497_db.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,8 +71,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905291440571_setup.resx">
-      <DependentUpon>201905291440571_setup.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905310803258_setup.resx">
+      <DependentUpon>201905310803258_setup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905310810497_db.resx">
+      <DependentUpon>201905310810497_db.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

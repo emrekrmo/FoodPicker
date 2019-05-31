@@ -143,6 +143,16 @@
     <Content Include="assets\icons\ionicons\css\ionicons.css" />
     <Content Include="assets\icons\ionicons\css\ionicons.min.css" />
     <Content Include="assets\icons\ionicons\fonts\ionicons.svg" />
+    <Content Include="assets\icons\lineawesome\css\line-awesome.css" />
+    <Content Include="assets\icons\lineawesome\css\line-awesome.min.css" />
+    <Content Include="assets\icons\lineawesome\css\line-awesome-font-awesome.css" />
+    <Content Include="assets\icons\lineawesome\css\line-awesome-font-awesome.min.css" />
+    <Content Include="assets\icons\meteocons\css\meteocons.css" />
+    <Content Include="assets\icons\meteocons\css\meteocons.min.css" />
+    <Content Include="assets\icons\meteocons\fonts\Meteocons.svg" />
+    <Content Include="assets\icons\themify\css\themify-icons.css" />
+    <Content Include="assets\icons\themify\css\themify-icons.min.css" />
+    <Content Include="assets\icons\themify\fonts\themify.svg" />
     <Content Include="assets\img\apple-touch-icon.png" />
     <Content Include="assets\img\avatar\avatar-01-big.jpg" />
     <Content Include="assets\img\avatar\avatar-01.jpg" />
@@ -250,6 +260,11 @@
     <Content Include="assets\icons\ionicons\fonts\ionicons.eot" />
     <Content Include="assets\icons\ionicons\fonts\ionicons.ttf" />
     <Content Include="assets\icons\ionicons\fonts\ionicons.woff" />
+    <Content Include="assets\icons\themify\fonts\themify.eot" />
+    <Content Include="assets\icons\themify\fonts\themify.ttf" />
+    <Content Include="assets\icons\themify\fonts\themify.woff" />
+    <Content Include="assets\icons\meteocons\fonts\Meteocons.ttf" />
+    <Content Include="assets\icons\meteocons\fonts\Meteocons.woff" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -295,6 +310,7 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Food\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
