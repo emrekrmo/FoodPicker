@@ -18,24 +18,35 @@ namespace FoodPicker.Controllers
 
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult List()
-        {
             List<Food> foodList = _uw.foodRep.GetAll();
             return View(foodList);
         }
 
+        public ActionResult DeleteFood(int id)
+        {
+            _uw.foodRep.Delete(id);
+            _uw.Save();
+
+            return RedirectToAction("Index", "Food");
+        }
+
         public ActionResult AddFood()
         {
-            List<Restaurant> restaurant = _uw.restRep.GetAll();
+            IEnumerable<Restaurant> restaurant = _uw.restRep.GetAll();
             var restaurantList = restaurant.Select(x => new SelectListItem()
             {
                 Text = x.RestaurantName,
                 Value = x.Id.ToString()
             });
-            ViewBag.list = restaurantList;
+            ViewBag.restaurantList = restaurantList;
+
+            ViewBag.foodTypes = new SelectList(Enum.GetValues(typeof(FoodType))
+                .OfType<Enum>()
+                .Select(x => new SelectListItem
+            {
+                Text = Enum.GetName(typeof(FoodType), x),
+                Value = (Convert.ToInt32(x)).ToString()
+            }), "Value", "Text");
 
             return View();
         }
@@ -44,21 +55,83 @@ namespace FoodPicker.Controllers
         {
             if (ModelState.IsValid) //checks if the model is valid
             {
-                _uw.studentRep.Insert(student); //Add
+                _uw.foodRep.Create(food); //Add
+                _uw.Save();
 
-                return RedirectToAction("Index"); //Go to Home
+                return RedirectToAction("Index", "Food"); //Go to Home
             }
 
             //We stil need DropDownList so we keep this here as the 
-            var edu = _uw.educationRep.Get();
-            var list = edu.Select(x => new SelectListItem()
+            List<Restaurant> restaurant = _uw.restRep.GetAll();
+            var restaurantList = restaurant.Select(x => new SelectListItem()
             {
-                Text = x.EduName,
-                Value = x.EduId.ToString()
+                Text = x.RestaurantName,
+                Value = x.Id.ToString()
             });
-            ViewBag.list = list;
+            ViewBag.RestaurantList = restaurantList;
 
-            return View();
+            ViewBag.foodTypes = new SelectList(Enum.GetValues(typeof(FoodType))
+                .OfType<Enum>()
+                .Select(x => new SelectListItem
+                {
+                    Text = Enum.GetName(typeof(FoodType), x),
+                    Value = (Convert.ToInt32(x)).ToString()
+                }), "Value", "Text");
+
+            return View(food);
+        }
+
+        public ActionResult EditFood(int? id)
+        {
+            if (!id.HasValue) //if int is null. We need to check this as we set id nullable
+                return HttpNotFound();
+
+            List<Restaurant> restaurant = _uw.restRep.GetAll();
+            var restaurantList = restaurant.Select(x => new SelectListItem()
+            {
+                Text = x.RestaurantName,
+                Value = x.Id.ToString()
+            });
+            ViewBag.RestaurantList = restaurantList;
+
+            ViewBag.foodTypes = new SelectList(Enum.GetValues(typeof(FoodType))
+                .OfType<Enum>()
+                .Select(x => new SelectListItem
+                {
+                    Text = Enum.GetName(typeof(FoodType), x),
+                    Value = (Convert.ToInt32(x)).ToString()
+                }), "Value", "Text");
+
+            return View(_uw.foodRep.GetById(id.Value));
+        }
+        [HttpPost]
+        public ActionResult EditFood(Food food)
+        {
+            if (ModelState.IsValid)
+            {
+                _uw.foodRep.Update(food);
+                _uw.Save();
+
+                return RedirectToAction("Index", "Food");
+            }
+
+            List<Restaurant> restaurant = _uw.restRep.GetAll();
+            var restaurantList = restaurant.Select(x => new SelectListItem()
+            {
+                Text = x.RestaurantName,
+                Value = x.Id.ToString()
+            });
+            ViewBag.RestaurantList = restaurantList;
+
+            ViewBag.foodTypes = new SelectList(Enum.GetValues(typeof(FoodType))
+                .OfType<Enum>()
+                .Select(x => new SelectListItem
+                {
+                    Text = Enum.GetName(typeof(FoodType), x),
+                    Value = (Convert.ToInt32(x)).ToString()
+                }), "Value", "Text");
+
+            return View(food); //shows the last written values
         }
     }
 }

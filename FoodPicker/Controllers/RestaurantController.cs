@@ -15,11 +15,13 @@ namespace FoodPicker.Controllers
         {
             _uw = new UnitOfWork();
         }
+
         public ActionResult Index()
         {
-            return View();
+            List<Restaurant> restaurantList = _uw.restRep.GetAll();
+            return View(restaurantList);
         }
-        
+
         public ActionResult AddRestaurant()
         {
             return View();
@@ -28,11 +30,47 @@ namespace FoodPicker.Controllers
         public ActionResult AddRestaurant(Restaurant restaurant)
         {
             if (ModelState.IsValid)
-            {
+            { //vlidlik nullable lık mı. değilse ayarla
                 _uw.restRep.Create(restaurant);
-                return RedirectToAction("AddFood","Food");
+                _uw.Save();
+
+                return RedirectToAction("Index", "Restaurant");
             }
-            return View();
+            //validation ayarla
+
+            //_uw.restRep.Create(restaurant);
+            //_uw.Save();
+
+            return RedirectToAction("Index", "AddRestaurant");
+        }
+
+        public ActionResult DeleteRestaurant(int id)
+        {
+            _uw.restRep.Delete(id);
+            _uw.Save();
+
+            return RedirectToAction("Index", "Restaurant");
+        }
+
+        public ActionResult EditRestaurant(int? id)
+        {
+            if (!id.HasValue) //if int is null. We need to check this as we set id nullable
+                return HttpNotFound();
+
+            return View(_uw.restRep.GetById(id.Value));
+        }
+        [HttpPost]
+        public ActionResult EditRestaurant(Restaurant restaurant)
+        {
+            if (ModelState.IsValid)
+            {
+                _uw.restRep.Update(restaurant);
+                _uw.Save();
+
+                return RedirectToAction("Index", "Restaurant");
+            }
+
+            return View(restaurant); //shows the last written values
         }
     }
 }

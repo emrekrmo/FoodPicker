@@ -148,6 +148,7 @@
     <Content Include="assets\icons\lineawesome\css\line-awesome.min.css" />
     <Content Include="assets\icons\lineawesome\css\line-awesome-font-awesome.css" />
     <Content Include="assets\icons\lineawesome\css\line-awesome-font-awesome.min.css" />
+    <Content Include="assets\icons\lineawesome\fonts\line-awesome.svg" />
     <Content Include="assets\icons\meteocons\css\meteocons.css" />
     <Content Include="assets\icons\meteocons\css\meteocons.min.css" />
     <Content Include="assets\icons\meteocons\fonts\Meteocons.svg" />
@@ -179,6 +180,8 @@
     <Content Include="assets\img\logo.png" />
     <Content Include="assets\img\notifications\01.jpg" />
     <Content Include="assets\js\components\tables\tables.js" />
+    <Content Include="assets\js\components\validation\validation.js" />
+    <Content Include="assets\js\components\validation\validation.min.js" />
     <Content Include="assets\js\dashboard\db-modern.min.js" />
     <Content Include="assets\vendors\css\base\bootstrap.css" />
     <Content Include="assets\vendors\css\base\bootstrap.min.css" />
@@ -266,6 +269,10 @@
     <Content Include="assets\icons\themify\fonts\themify.woff" />
     <Content Include="assets\icons\meteocons\fonts\Meteocons.ttf" />
     <Content Include="assets\icons\meteocons\fonts\Meteocons.woff" />
+    <Content Include="assets\icons\lineawesome\fonts\line-awesome.eot" />
+    <Content Include="assets\icons\lineawesome\fonts\line-awesome.ttf" />
+    <Content Include="assets\icons\lineawesome\fonts\line-awesome.woff" />
+    <None Include="assets\icons\lineawesome\fonts\line-awesome.woff2" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -312,11 +319,15 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Food\List.cshtml" />
+    <Content Include="Views\Restaurant\AddRestaurant.cshtml" />
+    <Content Include="Views\Restaurant\Index.cshtml" />
+    <Content Include="Views\Restaurant\EditRestaurant.cshtml" />
+    <Content Include="Views\Food\AddFood.cshtml" />
+    <Content Include="Views\Food\EditFood.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Restaurant\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
