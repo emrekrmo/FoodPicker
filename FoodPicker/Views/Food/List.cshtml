@@ -20,6 +20,7 @@
                         <th>Restaurant</th>
                         <th>Price</th>
                         <th><span style="width:100px;">Food Type</span></th>
+                        <th>Picture</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -31,6 +32,7 @@
                             <td>@food.Restaurant.RestaurantName</td>
                             <td>@food.Price</td>
                             <td><span style="width:100px;"><span class="badge-text badge-text-small info">@food.FoodType</span></span></td>
+                            <td><img src="/Content/Uploads/@food.ImageURL" height="150" width="150" /></td>
                             <td class="td-actions">
                                 <a href="#"><i class="la la-edit edit"></i></a>
                                 <a href="#"><i class="la la-close delete"></i></a>

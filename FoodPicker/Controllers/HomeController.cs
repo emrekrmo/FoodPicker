@@ -10,23 +10,23 @@ namespace FoodPicker.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly UnitOfWork _uw;
-        public HomeController()
-        {
-            _uw = new UnitOfWork();
-        }
+        //private readonly UnitOfWork _uw;
+        //public HomeController()
+        //{
+        //    _uw = new UnitOfWork();
+        //}
 
-        public ActionResult Index()
-        {
-            return View();
-        }
+        //public ActionResult Index()
+        //{
+        //    return View();
+        //}
 
-        public ActionResult About()
-        {
-            return View();
-        }
+        //public ActionResult Register()
+        //{
+        //    return View();
+        //}
 
-        public ActionResult Contact()
+        public ActionResult ComingSoon()
         {
             return View();
         }

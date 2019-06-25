@@ -51,7 +51,7 @@
                     <div class="navbar-holder d-flex align-items-center align-middle justify-content-between">
                         <!-- Begin Logo -->
                         <div class="navbar-header">
-                            <a href="db-modern.html" class="navbar-brand">
+                            <a href="/Food/Index" class="navbar-brand">
                                 <div class="brand-image brand-big">
                                     <img src="~/assets/img/logo.png" alt="logo" style="width: 70px;" class="logo-big">
                                 </div>
@@ -67,109 +67,111 @@
                             <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="la la-search"></i></a></li>
                             <!-- End Search -->
                             <!-- Begin Notifications -->
-                            <li class="nav-item dropdown">
-                                <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="la la-bell animated infinite swing"></i><span class="badge-pulse"></span></a>
-                                <ul aria-labelledby="notifications" class="dropdown-menu notification">
-                                    <li>
-                                        <div class="notifications-header">
-                                            <div class="title">Notifications (4)</div>
-                                            <div class="notifications-overlay"></div>
-                                            <img src="~/assets/img/notifications/01.jpg" alt="..." class="img-fluid">
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="message-icon">
-                                                <i class="la la-user"></i>
+                            @*<li class="nav-item dropdown">
+                                <li class="nav-item dropdown">
+                                    <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="la la-bell animated infinite swing"></i><span class="badge-pulse"></span></a>
+                                    <ul aria-labelledby="notifications" class="dropdown-menu notification">
+                                        <li>
+                                            <div class="notifications-header">
+                                                <div class="title">Notifications (4)</div>
+                                                <div class="notifications-overlay"></div>
+                                                <img src="~/assets/img/notifications/01.jpg" alt="..." class="img-fluid">
                                             </div>
-                                            <div class="message-body">
-                                                <div class="message-body-heading">
-                                                    New user registered
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="message-icon">
+                                                    <i class="la la-user"></i>
                                                 </div>
-                                                <span class="date">2 hours ago</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="message-icon">
-                                                <i class="la la-calendar-check-o"></i>
-                                            </div>
-                                            <div class="message-body">
-                                                <div class="message-body-heading">
-                                                    New event added
+                                                <div class="message-body">
+                                                    <div class="message-body-heading">
+                                                        New user registered
+                                                    </div>
+                                                    <span class="date">2 hours ago</span>
                                                 </div>
-                                                <span class="date">7 hours ago</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="message-icon">
-                                                <i class="la la-history"></i>
-                                            </div>
-                                            <div class="message-body">
-                                                <div class="message-body-heading">
-                                                    Server rebooted
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="message-icon">
+                                                    <i class="la la-calendar-check-o"></i>
                                                 </div>
-                                                <span class="date">7 hours ago</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="message-icon">
-                                                <i class="la la-twitter"></i>
-                                            </div>
-                                            <div class="message-body">
-                                                <div class="message-body-heading">
-                                                    You have 3 new followers
+                                                <div class="message-body">
+                                                    <div class="message-body-heading">
+                                                        New event added
+                                                    </div>
+                                                    <span class="date">7 hours ago</span>
                                                 </div>
-                                                <span class="date">10 hours ago</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a rel="nofollow" href="#" class="dropdown-item all-notifications text-center">View All Notifications</a>
-                                    </li>
-                                </ul>
-                            </li>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="message-icon">
+                                                    <i class="la la-history"></i>
+                                                </div>
+                                                <div class="message-body">
+                                                    <div class="message-body-heading">
+                                                        Server rebooted
+                                                    </div>
+                                                    <span class="date">7 hours ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="message-icon">
+                                                    <i class="la la-twitter"></i>
+                                                </div>
+                                                <div class="message-body">
+                                                    <div class="message-body-heading">
+                                                        You have 3 new followers
+                                                    </div>
+                                                    <span class="date">10 hours ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a rel="nofollow" href="#" class="dropdown-item all-notifications text-center">View All Notifications</a>
+                                        </li>
+                                    </ul>
+                                </li>*@
                             <!-- End Notifications -->
                             <!-- User -->
                             <li class="nav-item dropdown">
                                 <a id="user" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><img src="~/assets/img/avatar/avatar-01.jpg" alt="..." class="avatar rounded-circle"></a>
                                 <ul aria-labelledby="user" class="user-size dropdown-menu">
                                     <li class="welcome">
-                                        <a href="#" class="edit-profil"><i class="la la-gear"></i></a>
+                                        <a href="/Home/ComingSoon" class="edit-profil"><i class="la la-gear"></i></a>
                                         <img src="~/assets/img/avatar/avatar-01.jpg" alt="..." class="rounded-circle">
                                     </li>
-                                    <li>
-                                        <a href="pages-profile.html" class="dropdown-item">
-                                            Profile
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="app-mail.html" class="dropdown-item">
-                                            Messages
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="dropdown-item no-padding-bottom">
-                                            Settings
-                                        </a>
-                                    </li>
+                                    @*<li>
+                                            <a href="pages-profile.html" class="dropdown-item">
+                                                Profile
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="app-mail.html" class="dropdown-item">
+                                                Messages
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item no-padding-bottom">
+                                                Settings
+                                            </a>
+                                        </li>*@
                                     <li class="separator"></li>
-                                    <li>
-                                        <a href="pages-faq.html" class="dropdown-item no-padding-top">
-                                            Faq
-                                        </a>
-                                    </li>
-                                    <li><a rel="nofollow" href="pages-login.html" class="dropdown-item logout text-center"><i class="ti-power-off"></i></a></li>
+                                    @*<li>
+                                            <a href="pages-faq.html" class="dropdown-item no-padding-top">
+                                                Logoff
+                                            </a>
+                                        </li>*@
+                                    @*<li><a rel="nofollow" href="pages-login.html" class="dropdown-item logout text-center"><i class="ti-power-off"></i></a></li>*@
+                                    @Html.Partial("_LoginPartial")
                                 </ul>
                             </li>
                             <!-- End User -->
                             <!-- Begin Quick Actions -->
-                            <li class="nav-item"><a href="#off-canvas" class="open-sidebar"><i class="la la-ellipsis-h"></i></a></li>
+                            @*<li class="nav-item"><a href="#off-canvas" class="open-sidebar"><i class="la la-ellipsis-h"></i></a></li>*@
                             <!-- End Quick Actions -->
                         </ul>
                         <!-- End Navbar Menu -->
@@ -191,131 +193,134 @@
                                         <li><a href="/Food/AddFood">Add Food</a></li>
                                         <li><a href="/Restaurant/Index">Restaurant</a></li>
                                         <li><a href="/Restaurant/AddRestaurant">Add Restaurant</a></li>
-                                        <li class="dropdown">
-                                            <a class="dropdown-toggle" href="#" id="dashboard" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dashboard</a>
-                                            <ul class="dropdown-menu" aria-labelledby="dashboard">
-                                                <li><a href="db-default-dark.html">Default</a></li>
-                                                <li><a href="db-clean-dark.html">Clean</a></li>
-                                                <li><a href="db-compact-dark.html">Compact</a></li>
-                                                <li><a href="db-modern-dark.html">Modern</a></li>
-                                                <li><a href="db-social-dark.html">Social</a></li>
-                                                <li><a href="db-smarthome-dark.html">Smarthome</a></li>
-                                                <li><a href="db-all.html">All</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown">
-                                            <a class="dropdown-toggle" href="#" id="applications" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Applications</a>
-                                            <ul class="dropdown-menu" aria-labelledby="applications">
-                                                <li><a href="app-calendar.html">Calendar</a></li>
-                                                <li><a href="app-chat.html">Chat</a></li>
-                                                <li><a href="app-mail.html">Mail</a></li>
-                                                <li><a href="app-contact.html">Contact</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown">
-                                            <a class="dropdown-toggle" href="#" id="components" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
-                                            <ul class="dropdown-menu" aria-labelledby="components">
-                                                <li class="dropdown">
-                                                    <a class="dropdown-toggle" href="#" id="elements" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="la la-share-alt"></i>UI Elements</a>
-                                                    <ul class="dropdown-menu" aria-labelledby="elements">
-                                                        <li><a href="components-buttons.html">Buttons</a></li>
-                                                        <li><a href="components-alerts.html">Alerts</a></li>
-                                                        <li><a href="components-modal.html">Modal</a></li>
-                                                        <li><a href="components-notifications.html">Noty</a></li>
-                                                        <li><a href="components-timeline.html">Timeline</a></li>
-                                                        <li><a href="components-progress.html">Progress</a></li>
-                                                        <li><a href="components-tabs.html">Tabs</a></li>
-                                                        <li><a href="charts-chartjs.html">Chart Js</a></li>
-                                                        <li><a href="components-accordion.html">Accordion</a></li>
-                                                        <li><a href="components-popover.html">Popover</a></li>
-                                                        <li><a href="components-tooltip.html">Tooltip</a></li>
-                                                        <li><a href="components-scrollable.html">Scrollable</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="dropdown">
-                                                    <a class="dropdown-toggle" href="#" id="icons" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="la la-font"></i>Icons</a>
-                                                    <ul class="dropdown-menu" aria-labelledby="icons">
-                                                        <li><a href="icons-lineawesome.html">Line Awesome</a></li>
-                                                        <li><a href="icons-themify.html">Themify</a></li>
-                                                        <li><a href="icons-ionicons.html">Ionicons</a></li>
-                                                        <li><a href="icons-meteocons.html">Meteocons</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="dropdown">
-                                                    <a class="dropdown-toggle" href="#" id="forms" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="la la-list-alt"></i>Forms</a>
-                                                    <ul class="dropdown-menu" aria-labelledby="forms">
-                                                        <li><a href="forms-basic.html">Form Basic</a></li>
-                                                        <li><a href="forms-validation.html">Form Validation</a></li>
-                                                        <li><a href="forms-wizard.html">Form Wizard</a></li>
-                                                        <li><a href="forms-select.html">Bootstrap Select</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="dropdown">
-                                                    <a class="dropdown-toggle" id="tables" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="la la-th-large"></i><span>Tables</span></a>
-                                                    <ul class="dropdown-menu" aria-labelledby="tables">
-                                                        <li><a href="tables-basic.html">Basic</a></li>
-                                                        <li><a href="tables-datatables.html">Datatables</a></li>
-                                                        <li><a href="tables-tabledit.html">Tabledit</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown">
-                                            <a class="dropdown-toggle" href="#" id="pages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
-                                            <ul class="dropdown-menu" aria-labelledby="pages">
-                                                <li class="dropdown">
-                                                    <a class="dropdown-toggle" href="#" id="authentication" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="la la-lock"></i>Authentication</a>
-                                                    <ul class="dropdown-menu" aria-labelledby="authentication">
-                                                        <li><a href="pages-login.html">Login</a></li>
-                                                        <li><a href="pages-login-02.html">Login 02</a></li>
-                                                        <li><a href="pages-register.html">Register</a></li>
-                                                        <li><a href="pages-forgot-password.html">Forgot Password</a></li>
-                                                        <li><a href="pages-lock-screen.html">Lock Screen</a></li>
-                                                        <li><a href="pages-mail-confirm.html">Mail Confirmation</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="dropdown">
-                                                    <a class="dropdown-toggle" href="#" id="social" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="la la-comments"></i>Social</a>
-                                                    <ul class="dropdown-menu" aria-labelledby="social">
-                                                        <li><a href="pages-newsfeed.html">Newsfeed</a></li>
-                                                        <li><a href="pages-about.html">About</a></li>
-                                                        <li><a href="pages-events.html">Events</a></li>
-                                                        <li><a href="pages-friends.html">Friends</a></li>
-                                                        <li><a href="pages-groups.html">Groups</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="dropdown">
-                                                    <a class="dropdown-toggle" href="#" id="email" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="la la-at"></i>Email</a>
-                                                    <ul class="dropdown-menu" aria-labelledby="email">
-                                                        <li><a href="email-welcome.html">Welcome</a></li>
-                                                        <li><a href="email-password.html">Reset Password</a></li>
-                                                        <li><a href="email-order.html">Order Confirmation</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="dropdown">
-                                                    <a class="dropdown-toggle" href="#" id="errors" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="la la-exclamation-triangle"></i>Errors</a>
-                                                    <ul class="dropdown-menu" aria-labelledby="errors">
-                                                        <li><a href="pages-404-01.html">Style 01</a></li>
-                                                        <li><a href="pages-404-02.html">Style 02</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="dropdown">
-                                                    <a class="dropdown-toggle" href="#" id="pricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="la la-usd"></i>Pricing</a>
-                                                    <ul class="dropdown-menu" aria-labelledby="pricing">
-                                                        <li><a href="pages-pricing-tables-01.html">Style 01</a></li>
-                                                        <li><a href="pages-pricing-tables-02.html">Style 02</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="pages-coming-soon.html"><i class="la la-rocket"></i>Coming Soon</a></li>
-                                                <li><a href="pages-profile.html"><i class="la la-user"></i>Profile</a></li>
-                                                <li><a href="pages-invoice.html"><i class="la la-clipboard"></i>Invoice</a></li>
-                                                <li><a href="pages-search.html"><i class="la la-search"></i>Search</a></li>
-                                                <li><a href="pages-faq.html"><i class="la la-question-circle"></i>FAQ</a></li>
-                                                <li><a href="pages-blank.html"><i class="la la-edit"></i>Blank</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="maps-leaflet.html">Maps</a></li>
-                                        <li><a href="components-widgets.html">Widgets</a></li>
+                                        <li><a href="/Picker/AllRandom">Pick My Food</a></li>
+                                        <li><a href="/Picker/HealthyRandom">Pick Healty Food</a></li>
+                                        <li><a href="/Picker/Index">Pick Group Food</a></li>
+                                        @*<li class="dropdown">
+                                                <a class="dropdown-toggle" href="#" id="dashboard" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dashboard</a>
+                                                <ul class="dropdown-menu" aria-labelledby="dashboard">
+                                                    <li><a href="db-default-dark.html">Default</a></li>
+                                                    <li><a href="db-clean-dark.html">Clean</a></li>
+                                                    <li><a href="db-compact-dark.html">Compact</a></li>
+                                                    <li><a href="db-modern-dark.html">Modern</a></li>
+                                                    <li><a href="db-social-dark.html">Social</a></li>
+                                                    <li><a href="db-smarthome-dark.html">Smarthome</a></li>
+                                                    <li><a href="db-all.html">All</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a class="dropdown-toggle" href="#" id="applications" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Applications</a>
+                                                <ul class="dropdown-menu" aria-labelledby="applications">
+                                                    <li><a href="app-calendar.html">Calendar</a></li>
+                                                    <li><a href="app-chat.html">Chat</a></li>
+                                                    <li><a href="app-mail.html">Mail</a></li>
+                                                    <li><a href="app-contact.html">Contact</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a class="dropdown-toggle" href="#" id="components" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
+                                                <ul class="dropdown-menu" aria-labelledby="components">
+                                                    <li class="dropdown">
+                                                        <a class="dropdown-toggle" href="#" id="elements" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="la la-share-alt"></i>UI Elements</a>
+                                                        <ul class="dropdown-menu" aria-labelledby="elements">
+                                                            <li><a href="components-buttons.html">Buttons</a></li>
+                                                            <li><a href="components-alerts.html">Alerts</a></li>
+                                                            <li><a href="components-modal.html">Modal</a></li>
+                                                            <li><a href="components-notifications.html">Noty</a></li>
+                                                            <li><a href="components-timeline.html">Timeline</a></li>
+                                                            <li><a href="components-progress.html">Progress</a></li>
+                                                            <li><a href="components-tabs.html">Tabs</a></li>
+                                                            <li><a href="charts-chartjs.html">Chart Js</a></li>
+                                                            <li><a href="components-accordion.html">Accordion</a></li>
+                                                            <li><a href="components-popover.html">Popover</a></li>
+                                                            <li><a href="components-tooltip.html">Tooltip</a></li>
+                                                            <li><a href="components-scrollable.html">Scrollable</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown">
+                                                        <a class="dropdown-toggle" href="#" id="icons" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="la la-font"></i>Icons</a>
+                                                        <ul class="dropdown-menu" aria-labelledby="icons">
+                                                            <li><a href="icons-lineawesome.html">Line Awesome</a></li>
+                                                            <li><a href="icons-themify.html">Themify</a></li>
+                                                            <li><a href="icons-ionicons.html">Ionicons</a></li>
+                                                            <li><a href="icons-meteocons.html">Meteocons</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown">
+                                                        <a class="dropdown-toggle" href="#" id="forms" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="la la-list-alt"></i>Forms</a>
+                                                        <ul class="dropdown-menu" aria-labelledby="forms">
+                                                            <li><a href="forms-basic.html">Form Basic</a></li>
+                                                            <li><a href="forms-validation.html">Form Validation</a></li>
+                                                            <li><a href="forms-wizard.html">Form Wizard</a></li>
+                                                            <li><a href="forms-select.html">Bootstrap Select</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown">
+                                                        <a class="dropdown-toggle" id="tables" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="la la-th-large"></i><span>Tables</span></a>
+                                                        <ul class="dropdown-menu" aria-labelledby="tables">
+                                                            <li><a href="tables-basic.html">Basic</a></li>
+                                                            <li><a href="tables-datatables.html">Datatables</a></li>
+                                                            <li><a href="tables-tabledit.html">Tabledit</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a class="dropdown-toggle" href="#" id="pages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                                <ul class="dropdown-menu" aria-labelledby="pages">
+                                                    <li class="dropdown">
+                                                        <a class="dropdown-toggle" href="#" id="authentication" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="la la-lock"></i>Authentication</a>
+                                                        <ul class="dropdown-menu" aria-labelledby="authentication">
+                                                            <li><a href="pages-login.html">Login</a></li>
+                                                            <li><a href="pages-login-02.html">Login 02</a></li>
+                                                            <li><a href="pages-register.html">Register</a></li>
+                                                            <li><a href="pages-forgot-password.html">Forgot Password</a></li>
+                                                            <li><a href="pages-lock-screen.html">Lock Screen</a></li>
+                                                            <li><a href="pages-mail-confirm.html">Mail Confirmation</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown">
+                                                        <a class="dropdown-toggle" href="#" id="social" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="la la-comments"></i>Social</a>
+                                                        <ul class="dropdown-menu" aria-labelledby="social">
+                                                            <li><a href="pages-newsfeed.html">Newsfeed</a></li>
+                                                            <li><a href="pages-about.html">About</a></li>
+                                                            <li><a href="pages-events.html">Events</a></li>
+                                                            <li><a href="pages-friends.html">Friends</a></li>
+                                                            <li><a href="pages-groups.html">Groups</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown">
+                                                        <a class="dropdown-toggle" href="#" id="email" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="la la-at"></i>Email</a>
+                                                        <ul class="dropdown-menu" aria-labelledby="email">
+                                                            <li><a href="email-welcome.html">Welcome</a></li>
+                                                            <li><a href="email-password.html">Reset Password</a></li>
+                                                            <li><a href="email-order.html">Order Confirmation</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown">
+                                                        <a class="dropdown-toggle" href="#" id="errors" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="la la-exclamation-triangle"></i>Errors</a>
+                                                        <ul class="dropdown-menu" aria-labelledby="errors">
+                                                            <li><a href="pages-404-01.html">Style 01</a></li>
+                                                            <li><a href="pages-404-02.html">Style 02</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown">
+                                                        <a class="dropdown-toggle" href="#" id="pricing" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="la la-usd"></i>Pricing</a>
+                                                        <ul class="dropdown-menu" aria-labelledby="pricing">
+                                                            <li><a href="pages-pricing-tables-01.html">Style 01</a></li>
+                                                            <li><a href="pages-pricing-tables-02.html">Style 02</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="pages-coming-soon.html"><i class="la la-rocket"></i>Coming Soon</a></li>
+                                                    <li><a href="pages-profile.html"><i class="la la-user"></i>Profile</a></li>
+                                                    <li><a href="pages-invoice.html"><i class="la la-clipboard"></i>Invoice</a></li>
+                                                    <li><a href="pages-search.html"><i class="la la-search"></i>Search</a></li>
+                                                    <li><a href="pages-faq.html"><i class="la la-question-circle"></i>FAQ</a></li>
+                                                    <li><a href="pages-blank.html"><i class="la la-edit"></i>Blank</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="maps-leaflet.html">Maps</a></li>
+                                            <li><a href="components-widgets.html">Widgets</a></li>*@
                                     </ul>
                                 </div>
                             </nav>
@@ -326,6 +331,7 @@
         </header>
         @RenderBody()
     </div>
+
     <script src="~/assets/vendors/js/base/jquery.min.js"></script>
     <script src="~/assets/vendors/js/base/core.min.js"></script>
     <!-- End Vendor Js -->
@@ -340,5 +346,8 @@
     <script src="~/assets/js/dashboard/db-modern.min.js"></script>
     <!-- End Page Snippets -->
     <script src="assets/js/components/validation/validation.min.js"></script> <!-- added -->
+    @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)*@
 </body>
 </html>

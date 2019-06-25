@@ -1,4 +1,5 @@
 ﻿using Entity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -8,13 +9,17 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class ApplicationDbContext : DbContext
+ 
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext() : base("FoodPickerCon") { }
-
+        public ApplicationDbContext()
+            : base("FoodPickerCon", throwIfV1Schema: false)
+        {
+        }
         public virtual DbSet<Food> Foods { get; set; }
         public virtual DbSet<Restaurant> Restaurants { get; set; }
-
+        public virtual DbSet<ApplicationUser> Kullanici { get; set; }
+     
         protected override void OnModelCreating(DbModelBuilder builder)
         {
             #region TableSettings
@@ -55,24 +60,38 @@ namespace DAL
 
             #region Relations
 
+
             builder.Entity<Food>() //Food(many) - Restaurant(1)
                 .HasRequired(x => x.Restaurant)
                 .WithMany(x => x.Foods)
                 .HasForeignKey(x => x.RestaurantId);
 
             //builder.Entity<Food>() //Food(many) - User(1)
-            //    .HasRequired(x => x.User)
+            //    .HasRequired(x => x.ApplicationUser)
             //    .WithMany(x => x.Foods)
-            //    .HasForeignKey(x => x.UserId);
+            //    .HasForeignKey(x => x.ApplicationUserId);
+
+            builder.Entity<ApplicationUser>().HasMany(au => au.Foods)
+                .WithOptional(f => f.ApplicationUser)
+                .HasForeignKey(x => x.ApplicationUserId);
+
+            builder.Entity<ApplicationUser>()
+                .HasMany(au => au.Restaurants)
+                .WithOptional(f => f.ApplicationUser)
+                .HasForeignKey(x => x.ApplicationUserId);
 
             //builder.Entity<Restaurant>() //Restaurant(many) - User(1)
-            //    .HasRequired(x => x.User)
+            //    .HasRequired(x => x.ApplicationUser)
             //    .WithMany(x => x.Restaurants)
-            //    .HasForeignKey(x => x.UserId);
+            //    .HasForeignKey(x => x.ApplicationUserId);
 
             #endregion
 
             base.OnModelCreating(builder);
+        }
+        public static ApplicationDbContext Create()
+        {
+            return new ApplicationDbContext();
         }
     }
 }
